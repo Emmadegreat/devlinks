@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Login = () => {
@@ -5,6 +6,7 @@ const Login = () => {
         <div>
             <h1>Welcome to DevLinks</h1>
             <h4>Login</h4>
+            <p>Don&#39;t have an account?<Link href="/register">Create Account</Link></p>
         </div>
     )
 }
