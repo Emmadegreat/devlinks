@@ -32,3 +32,26 @@ body {
     text-wrap: balance;
   }
 }
+
+/* globals.css */
+
+/* Custom Ant Design input styles */
+.custom-ant-input .ant-input,
+.custom-ant-input .ant-input-password {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-ant-input .ant-input:focus,
+.custom-ant-input .ant-input-password:focus {
+  border-color: #9254de;
+  box-shadow: 0 0 0 2px rgba(146, 84, 222, 0.2);
+}
+
+.custom-ant-input .ant-input:hover,
+.custom-ant-input .ant-input-password:hover {
+  border-color: #9254de;
+}
+
