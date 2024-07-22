@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 const Register:FC = () => {
 
   return (
-    <div>Register</div>
+    <div>Emma- write tyour code here Register</div>
   )
 }
 
