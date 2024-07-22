@@ -67,8 +67,9 @@ const Register:FC = () => {
                   <input type="email"
                     placeholder='At least 8 characters'
                     value=""
-                    className='w-full h-[44px] placeholder-[#737373] placeholder-[14px]
-                    text-[1rem] p-[3rem] py-1 mb-4 rounded-lg border-[1px] border-[#D9D9D9] focus:outline-0 focus:border-[1px] focus:border-[#D9D9D9]'
+                    className='w-full h-[44px] placeholder-[#737373] placeholder-[14px] text-[1rem] p-[3rem]
+                     py-1 mb-4 rounded-lg border-[1px] border-[#D9D9D9] focus:outline-0 focus:border-[0.5px]
+                     focus:border-[#633CFF] focus:ring focus:ring-[#633CFF] focus:ring-opacity-20  focus:shadow-[0_0_0.3px_#633CFF]'
                   />
                 </div>
               </div>
