@@ -1,16 +1,33 @@
 "use client";
-
+import {toast} from 'react-toastify'
 import Link from 'next/link';
+import { auth, db } from '../../firebase'
 import React, { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [showError, setShowError] = useState<boolean>(false);
+    const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
+    const handleLogin = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            signInWithEmailAndPassword(auth, email, password);
+            setShowError(false);
+            setErrorMessage("");
+            toast.success('successfully signed in')
+            window.location.href="/home" //modify as expected
+        } catch (error) {
+            setShowError(true);
+            //setErrorMessag('error');
+
+        }
+    }
+
+
 
   return (
     <div className='h-screen flex justify-center items-center'>
