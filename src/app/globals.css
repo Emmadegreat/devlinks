@@ -8,29 +8,29 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  font-family: Instrument Sans;
-  /* color: rgb(var(--foreground-rgb)); */
-  background: #fafafa;
+	font-family: Instrument Sans;
+	/* color: rgb(var(--foreground-rgb)); */
+	background: #fafafa;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
 .btn:hover {
   box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
@@ -39,13 +39,8 @@ body {
 
 /* globals.css */
 
-/* Custom Ant Design input styles */
-.custom-ant-input .ant-input,
-.custom-ant-input .ant-input-password {
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  padding: 10px 15px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+.email:focus {
+	box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
 }
 
 .custom-ant-input .ant-input:focus,
