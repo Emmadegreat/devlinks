@@ -1,7 +1,7 @@
-        "use client";
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Input, Select } from "antd";
+import { Input, Select, notification } from "antd";
 
 interface Link {
 	id: number;
@@ -13,7 +13,16 @@ const DdesktopAddLinks = () => {
 	const [links, setLinks] = useState<Link[]>([]);
 
 	const addNewLink = () => {
-		setLinks([...links, { id: links.length + 1, platform: "", url: "" }]);
+		if (links.length < 3) {
+			setLinks([...links, { id: links.length + 1, platform: "", url: "" }]);
+		} else {
+			notification.info({
+				message: "Limit Reached",
+				description:
+					"You have reached the maximum of 3 links. Please save your work before adding more.",
+				duration: 5
+			});
+		}
 	};
 
 	const removeLink = (id: number) => {
@@ -79,12 +88,25 @@ const DdesktopAddLinks = () => {
 									<div className="w-[78px] h-[8px] bg-[#EEEEEE] rounded-[104px]"></div>
 								</div>
 
-								<div className="flex flex-col gap-3">
-									<div className="bg-[#EEEEEE] rounded-lg h-[44px] w-[237px]"></div>
-									<div className="bg-[#EEEEEE] rounded-lg h-[44px] w-[237px]"></div>
-									<div className="bg-[#EEEEEE] rounded-lg h-[44px] w-[237px]"></div>
-									<div className="bg-[#EEEEEE] rounded-lg h-[44px] w-[237px]"></div>
-									<div className="bg-[#EEEEEE] rounded-lg h-[44px] w-[237px]"></div>
+								<div className="flex flex-col gap-2">
+									{links.map((link) => (
+										<React.Fragment key={link.id}>
+											<div className="bg-[#EEEEEE] rounded-lg h-[40px] w-[237px] flex items-center px-[8px] text-nowrap overflow-hidden">
+												{link.platform}
+											</div>
+											<div className="bg-[#EEEEEE] rounded-lg h-[40px] w-[237px] flex items-center px-[8px] text-nowrap overflow-hidden">
+												{link.url}
+											</div>
+										</React.Fragment>
+									))}
+									{Array(3 - links.length)
+										.fill(null)
+										.map((_, index) => (
+											<React.Fragment key={index}>
+												<div className="bg-[#EEEEEE] rounded-lg h-[40px] w-[237px]"></div>
+												<div className="bg-[#EEEEEE] rounded-lg h-[40px] w-[237px]"></div>
+											</React.Fragment>
+										))}
 								</div>
 							</div>
 						</div>
@@ -172,20 +194,28 @@ const DdesktopAddLinks = () => {
 										<p className="font-[400] text-[12px] leading-[18px] text-[#333333]">
 											Link
 										</p>
-										<Input
-                    className="custom"
-											placeholder="e.g. https://www.github.com/johnappleseed"
-											value={link.url}
-											onChange={(e) =>
-												setLinks(
-													links.map((l) =>
-														l.id === link.id
-															? { ...l, url: e.target.value }
-															: l
+										<div>
+											<Image className="relative left-[10px] top-[2rem] -mt-[1rem] z-10"
+												src="/assests/icons/link-bold.svg"
+												alt="link-bold"
+												width={16}
+												height={16}
+                        />
+											<Input
+												className="pl-[30px]"
+												placeholder="e.g. https://www.github.com/johnappleseed"
+												value={link.url}
+												onChange={(e) =>
+													setLinks(
+														links.map((l) =>
+															l.id === link.id
+																? { ...l, url: e.target.value }
+																: l
+														)
 													)
-												)
-											}
-										/>
+												}
+											/>
+										</div>
 									</div>
 								</div>
 							))}
