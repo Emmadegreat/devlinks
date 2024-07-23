@@ -34,27 +34,33 @@ body {
 }
 .btn:hover {
   box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
-  background-color: #BEADFF;
+  background-color: #beadff;
 }
 
 /* globals.css */
-
-/* Custom Ant Design input styles */
-.custom-ant-input .ant-input,
-.custom-ant-input .ant-input-password {
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  padding: 10px 15px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+.ant-select-focused:where(.css-dev-only-do-not-override-1uq9j6g).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  border-color: #633cff40;
 }
 
-.custom-ant-input .ant-input:focus,
-.custom-ant-input .ant-input-password:focus {
-  border-color: #9254de;
-  box-shadow: 0 0 0 2px rgba(146, 84, 222, 0.2);
+.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+  .ant-select-selector {
+  border: 1px solid #633cff40 !important;
+  box-shadow: 0px 0px 32px 0px #633cff40;
+  cursor: pointer;
 }
 
-.custom-ant-input .ant-input:hover,
-.custom-ant-input .ant-input-password:hover {
-  border-color: #9254de;
+.ant-input {
+  height: 48px;
+}
+.ant-select-selector {
+  height: 48px !important;
+}
+.ant-input-outlined {
+  border: 1px solid #d9d9d9 !important;
+}
+.ant-input-outlined:hover {
+  border: 1px solid #633cff40 !important;
+  box-shadow: 0px 0px 32px 0px #633cff40;
+  cursor: pointer;
 }

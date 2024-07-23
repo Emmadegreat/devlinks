@@ -1,4 +1,3 @@
-
 'use client'
 import {toast} from 'react-toastify'
 import React, { FC, FormEvent, useState } from 'react'
@@ -7,11 +6,8 @@ import Image from 'next/image'
 import { auth, db } from '../../firebase'
 import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from "firebase/auth";
-//import { error } from 'console'
 
-
-
-const Register:FC = () => {
+const Register:FC=()=>{
 
   const [email, setEmail] = useState<string>("");
   const [password1, setPassword1] = useState<string>("");
@@ -25,9 +21,8 @@ const Register:FC = () => {
   const handleRegister = async (e: FormEvent) =>{
     e.preventDefault();
     setGeneralError("");
+    let valid;
 
-
-    let valid = true;
 
     if (!email) {
       setEmailError(true);
@@ -57,13 +52,12 @@ const Register:FC = () => {
 
       try {
 
-         // Check if email already exists
         const usersRef = collection(db, 'users');
         const q = query(usersRef, where('email', '==', email));
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
-          // Email already exists
+
           toast.error('Email already exists');
 
         } else {

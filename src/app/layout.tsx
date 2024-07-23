@@ -8,14 +8,14 @@ import 'react-toastify/dist/ReactToastify.css'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Devlins - App",
-  description: "Devlinks",
+	title: "Devlins - App",
+	description: "Devlinks"
 };
 
 export default function RootLayout({
-  children,
+	children
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
