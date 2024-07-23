@@ -13,8 +13,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center max-h-screen gap-10">
+    <div className='h-screen flex justify-center items-center'>
+      <div className="flex flex-col m-auto  gap-10">
         <div className="flex justify-center">
           <img src="/images/logo.png" alt="devlinks" width={185.5} height={40} />
         </div>
