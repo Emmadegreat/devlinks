@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: Instrument Sans;
 }
 
@@ -32,6 +32,10 @@ body {
     text-wrap: balance;
   }
 }
+.btn:hover {
+  box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+  background-color: #BEADFF;
+}
 
 /* globals.css */
 
@@ -54,4 +58,3 @@ body {
 .custom-ant-input .ant-input-password:hover {
   border-color: #9254de;
 }
-
