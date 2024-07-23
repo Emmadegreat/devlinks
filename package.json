@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"name": "devlinks",
 	"version": "0.1.0",
 	"private": true,
@@ -24,4 +25,32 @@
 		"tailwindcss": "^3.4.1",
 		"typescript": "^5"
 	}
+=======
+  "name": "devlinks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^5.19.3",
+    "firebase": "^10.12.4",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+>>>>>>> 8fbe9d0520f4ad12e93b3e36b66f9a34d42c6ce6
 }
