@@ -183,7 +183,7 @@ export default Register;
 
               <div className='flex flex-col'>
 
-                <span className='text-[14px] text-[#737373]'>Create Password</span>
+                <span className='text-[13px] text-[#737373]'>Create Password</span>
 
                 <div className='relative'>
 
