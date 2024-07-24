@@ -8,48 +8,59 @@
 }
 
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 body {
-	font-family: Instrument Sans;
-	/* color: rgb(var(--foreground-rgb)); */
-	background: #fafafa;
+  font-family: Instrument Sans;
+  /* color: rgb(var(--foreground-rgb)); */
+  background: #fafafa;
 }
 
 @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 .btn:hover {
   box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
-  background-color: #BEADFF;
+  background-color: #beadff;
 }
 
 /* globals.css */
-
-.email:focus {
-	box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+.ant-select-focused:where(.css-dev-only-do-not-override-1uq9j6g).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  border-color: #633cff40;
 }
 
-.custom-ant-input .ant-input:focus,
-.custom-ant-input .ant-input-password:focus {
-  border-color: #9254de;
-  box-shadow: 0 0 0 2px rgba(146, 84, 222, 0.2);
+.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+  .ant-select-selector {
+  border: 1px solid #633cff40 !important;
+  box-shadow: 0px 0px 32px 0px #633cff40;
+  cursor: pointer;
 }
 
-.custom-ant-input .ant-input:hover,
-.custom-ant-input .ant-input-password:hover {
-  border-color: #9254de;
+.ant-input {
+  height: 48px;
+}
+.ant-select-selector {
+  height: 48px !important;
+}
+.ant-input-outlined {
+  border: 1px solid #d9d9d9 !important;
+}
+.ant-input-outlined:hover {
+  border: 1px solid #633cff40 !important;
+  box-shadow: 0px 0px 32px 0px #633cff40;
+  cursor: pointer;
 }
