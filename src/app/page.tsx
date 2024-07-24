@@ -5,8 +5,9 @@ import ProfileDetails from "@/components/ProfileDetails";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center bg-[#fafafa]">
+    <main className="flex flex-col items-cente bg-[#fafafa]">
       <Login/>
+			<ProfileDetails/>
     </main>
   );
 }
